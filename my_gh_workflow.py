@@ -15,11 +15,12 @@ def get_repo_info(repo_owner: str, repo_name: str):
 @task
 def get_contributors(repo_info: dict):
     """Get contributors for a repo"""
-    contributors_url = repo_info["contributors_url"]
+    '''contributors_url = repo_info["contributors_url"]
     response = httpx.get(contributors_url)
     response.raise_for_status()
     contributors = response.json()
-    return contributors
+    return contributors'''
+    return ['1', '2', '3']
 
 
 @flow(log_prints=True)
